@@ -1,0 +1,260 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, serif;
+  color: #222;
+  background: #ffffff;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+  padding: 16px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.logo {
+  color: #222;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+nav {
+  display: flex;
+  gap: 28px;
+}
+
+nav a {
+  color: #444;
+  text-decoration: none;
+  font-size: 0.88rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+/* About */
+#about {
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding: 80px 60px;
+  background: #ffffff;
+}
+
+#about img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ddd;
+  flex-shrink: 0;
+}
+
+.about-text h1 {
+  font-size: 1.9rem;
+  color: #111;
+  margin-bottom: 14px;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+.about-text p {
+  font-size: 0.95rem;
+  line-height: 1.9;
+  color: #555;
+  max-width: 560px;
+}
+
+/* Cards */
+#cards {
+  padding: 70px 60px;
+  background: #f7f7f7;
+}
+
+#cards h2 {
+  font-size: 1.4rem;
+  color: #111;
+  margin-bottom: 36px;
+  text-align: center;
+  font-weight: normal;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 4px;
+  width: 280px;
+  overflow: hidden;
+  border: 1px solid #e8e8e8;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.07);
+}
+
+.card img {
+  width: 100%;
+  display: block;
+}
+
+.card-body {
+  padding: 18px;
+}
+
+.card-body h3 {
+  font-size: 0.95rem;
+  color: #111;
+  margin-bottom: 8px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.card-body p {
+  font-size: 0.85rem;
+  color: #777;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.card-body a {
+  display: inline-block;
+  border: 1px solid #222;
+  color: #222;
+  padding: 8px 18px;
+  border-radius: 2px;
+  text-decoration: none;
+  font-size: 0.82rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: background 0.3s, color 0.3s;
+}
+
+.card-body a:hover {
+  background: #222;
+  color: #fff;
+}
+
+/* Contact */
+#contact {
+  padding: 70px 60px;
+  background: #ffffff;
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 1.4rem;
+  color: #111;
+  margin-bottom: 24px;
+  font-weight: normal;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+#contact p {
+  font-size: 0.92rem;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+#contact a {
+  color: #222;
+  text-decoration: none;
+  border-bottom: 1px solid #ccc;
+  transition: border-color 0.3s;
+}
+
+#contact a:hover {
+  border-color: #222;
+}
+
+/* Footer */
+footer {
+  background: #f0f0f0;
+  color: #999;
+  text-align: center;
+  padding: 24px;
+  font-size: 0.82rem;
+  letter-spacing: 1px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  #about {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 24px;
+  }
+
+  .about-text p {
+    max-width: 100%;
+  }
+
+  #cards {
+    padding: 50px 20px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  #contact {
+    padding: 50px 24px;
+  }
+
+  header {
+    padding: 14px 20px;
+  }
+
+  nav {
+    gap: 16px;
+  }
+
+  nav a {
+    font-size: 0.78rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-text h1 {
+    font-size: 1.4rem;
+  }
+
+  #about img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .logo {
+    font-size: 1rem;
+  }
+}
